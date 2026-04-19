@@ -1,0 +1,1390 @@
+{
+  "name": "HackathonPipeline",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -704,
+        -96
+      ],
+      "id": "13c00408-fbf3-4992-aebd-d41f2aaa19ef",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "jsCode": "const csv = `name,email,company,domain,linkedin,title,score_raw,score,tier\nSwapnil Tripathi,swapnil@sprinto.com,Sprinto,sprinto.com,https://www.linkedin.com/in/swapnil-tripathi-3a7661100/,Associate Director (Solutions Engineering),Score: 78,78,Hot\nRoushan Kumar,roushan@brightmoney.co,Bright Money,brightmoney.co,https://www.linkedin.com/in/roushan-kumar-b403b099/,VP of Engineering,Score: 85,85,Hot\nMark Robinson,mrobinson@plaid.com,Plaid,plaid.com,https://www.linkedin.com/in/mark-robinson-944084b/,Staff Infrastructure Engineer,Score: 88,88,Hot\nMatt Moore,matthew.moore@chainguard.dev,Chainguard,chainguard.dev,https://www.linkedin.com/in/matthew-moore-468a3724/,Founder and Chief Technology Officer,Score: 84,84,Hot\nRohit Khanna,rohit@coderabbit.ai,CodeRabbit,coderabbit.ai,https://www.linkedin.com/in/rrkhanna/,VP of Engineering & Site Leader,Score: 78,78,Hot\nBel Curcio,bel@vercel.com,Vercel,vercel.com,https://www.linkedin.com/in/okbel/,Engineering Director,Score: 76,76,Hot\nMichael Baamonde,mike@supabase.com,Supabase,supabase.com,https://www.linkedin.com/in/michael-baamonde/,Head of Platform,Score: 90,90,Hot\nJulianna Lamb,julianna@stytch.com,Stytch,stytch.com,https://www.linkedin.com/in/juliannaelamb/,Engineering,Score: 78,78,Hot\nSahil P.,sahil@retool.com,Retool,retool.com,https://www.linkedin.com/in/sahilpatel3/,Global Head of Solutions Engineering,Score: 85,85,Hot\nVinicius Pulga,vp@twilio.com,Segment,segment.com,https://www.linkedin.com/in/vinicius-pulga/,Principal Solutions Engineer,Score: 82,82,Hot\nRamil Manansala,ramil@hypersonix.ai,Hypersonix,hypersonix.ai,https://www.linkedin.com/in/ramil-manansala-481bba1b7/,VP of Engineering,Score: 72,72,Warm\nMohak Kothari,mohak.kothari@scryai.com,Scry AI,scryai.com,https://www.linkedin.com/in/mohak-kothari/,Principal Data Engineer,Score: 72,72,Warm\nAnand Saurabh,asaurabh@lucidya.com,Lucidya,lucidya.com,https://www.linkedin.com/in/anandsaurabh12/,VP of Engineering,Score: 65,65,Warm\nYaser Hameed,yaser.hameed@quillbot.com,Quillbot,quillbot.com,https://www.linkedin.com/in/yaser-hameed-97695a5b/,Sr. Director of Engineering Platform,Score: 55,55,Warm\nRajiv Anand,rajiv@quartic.ai,Quartic,quartic.ai,https://www.linkedin.com/in/rajiv-anand-/,CEO & Co-founder,Score: 68,68,Warm\nAmit Singh,amit@onebanc.ai,OneBanc,onebanc.ai,https://www.linkedin.com/in/amitsingh/,CTO,Score: 72,72,Warm\nAlberto Blazquez,alberto@bizneo.com,Bizneo,bizneo.com,https://www.linkedin.com/in/albertoblazquez/,CTO,Score: 65,65,Warm\nManas Agarwal,manas@hasura.io,Hasura,hasura.io,https://www.linkedin.com/in/manas-agarwal-9674b34/,VP of Engineering,Score: 70,70,Warm\nKamalakannan Nandagopal,kamalakannan@getpostman.com,Postman,postman.com,https://www.linkedin.com/in/kamalakannan-nandagopal-3650818a/,Staff Engineer,Score: 0,0,Warm\nNicolas Zelaya,nicolas.zelaya@split.io,Harness,harness.io,https://www.linkedin.com/in/zelayadn/,Product & Engineering Director,Score: 68,68,Warm\nBoyu Wang,boyu.wang@truefoundry.com,TrueFoundry,truefoundry.com,https://www.linkedin.com/in/boyu-wang-114a96a/,Head of Outcome Engineering,Score: 65,65,Warm\nChris S.,chris@scale.com,Scale AI,scale.com,https://www.linkedin.com/in/cstevens1/,Director Platform Engineering,Score: 72,72,Warm\nAkshat Bubna,akshat@modal.com,Modal,modal.com,https://www.linkedin.com/in/akshat-bubna-188885103/,Co-Founder & CTO,Score: 72,72,Warm\nScott Laird,scott.laird@temporal.io,Temporal,temporal.io,https://www.linkedin.com/in/scottlaird/,Staff Infrastructure Engineer,Score: 55,55,Warm\nMark Imbriaco,mark@railway.com,Railway,railway.com,https://www.linkedin.com/in/mark-imbriaco-b2a1484/,Head of Engineering,Score: 0,0,Warm\nDavid B.,david@nhost.io,Nhost,nhost.io,https://www.linkedin.com/in/dbarrosop/,CTO,Score: 72,72,Warm\nJeff Escalante,jeff@clerk.dev,Clerk,clerk.com,https://www.linkedin.com/in/jeffescalante/,Engineering Director,Score: 70,70,Warm\nNicholas Kucharski,nick@osohq.com,Oso,osohq.com,https://www.linkedin.com/in/nicholas-kucharski-ba748947/,Chief Technology Officer,Score: 72,72,Warm\nThomas Callahan,tom@hightouch.com,Hightouch,hightouch.com,https://www.linkedin.com/in/thomas-callahan-33548b8/,VP Engineering,Score: 68,68,Warm\nDavin Chia,davin.chia@airbyte.com,Airbyte,airbyte.com,https://www.linkedin.com/in/davin-chia/,Chief Technology Officer,Score: 68,68,Warm\nMike Gordon,michael.gordon@fivetran.com,Fivetran,fivetran.com,https://www.linkedin.com/in/mike-gordon-23628a1/,VP Platform Engineering,Score: 58,58,Warm\nLuis Hector Chavez,luis@replit.com,Replit,replit.com,https://www.linkedin.com/in/luis-hector-chavez/,Chief Technology Officer,Score: 0,0,Warm\nManish Vora,manish@abacus.ai,Abacus AI,abacus.ai,https://www.linkedin.com/in/mkvora/,India Site Lead Engineering Director,Score: 0,0,Cold\nPriyabrata Pradhan,priyabrata@signzy.com,Signzy,signzy.com,https://www.linkedin.com/in/priyabrata-pradhan-priyam-1988a522/,VP of Engineering,Score: 0,0,Cold\nVikas Mishra,vikas.mishra@pixis.ai,Pixis,pixis.ai,https://www.linkedin.com/in/vikasmishra95/,Chief Technology Officer,Score: 0,0,Cold\nAtul Shree,atul@convin.ai,Convin,convin.ai,https://www.linkedin.com/in/notulatul/,Co-Founder & CTO,Score: 0,0,Cold\nSiddharth Gupta,siddharth@bitespeed.co,Bitespeed,bitespeed.co,https://www.linkedin.com/in/siddharthgupta/,Co-Founder & CTO,Score: 15,15,Cold\nJimit Bagadiya,jimit@socialpilot.co,SocialPilot,socialpilot.co,https://www.linkedin.com/in/jimit/,Co-Founder & CTO,Score: 0,0,Cold\nAndres Galindo,andresgalindo@stripe.com,Stripe,stripe.com,https://www.linkedin.com/in/andres-galindo-b713671a/,Staff Infrastructure Engineer,Score: 0,0,Cold\nDavid La Chasse,dave@wandb.ai,Weights and Biases,wandb.ai,https://www.linkedin.com/in/davelachasse/,Staff Data Platform Engineer,Score: 0,0,Cold\nJaikumar Ganesh,jaikumar@anyscale.com,Anyscale,anyscale.com,https://www.linkedin.com/in/jaikumarganesh/,Head of Engineering,Score: 0,0,Cold\nNicholas Van Wiggeren,nick@planetscale.com,PlanetScale,planetscale.com,https://www.linkedin.com/in/nicholas-van-wiggeren-85444528/,Chief Technology Officer,Score: 0,0,Cold\nMichael Greer,michael@render.com,Render,render.com,https://www.linkedin.com/in/michael-greer-65172b1/,VP of Engineering,Score: 0,0,Cold\nEldad Fux,eldad@appwrite.io,Appwrite,appwrite.io,https://www.linkedin.com/in/eldadfux/,Founder & CTO,Score: 0,0,Cold\nDan Buch,dan@replicate.com,Replicate,replicate.com,https://www.linkedin.com/in/dbuch/,Staff Software Engineer,Score: 0,0,Cold`;\n\nconst lines = csv.trim().split('\\n');\nconst headers = lines[0].split(',');\n\nreturn lines.slice(1).map(line => {\n  const values = line.split(',');\n  const obj = {};\n  headers.forEach((h, i) => {\n    obj[h.trim()] = (values[i] || '').trim();\n  });\n  obj.score = parseInt(obj.score) || 0;\n  obj.processed_at = new Date().toISOString();\n  return { json: obj };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -352,
+        -192
+      ],
+      "id": "ebdfc1df-0a86-4d2f-933e-a5e43010ced0",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.tier }}",
+                    "rightValue": "Hot",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "22d06692-4c3c-4178-809c-cde09257354b"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Hot"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "27310937-3c56-4f97-8c6e-8d07c9e46ec8",
+                    "leftValue": "={{ $json.tier }}",
+                    "rightValue": "Warm",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Warm"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "417b4653-2cae-4429-96e8-0a94923e40e9",
+                    "leftValue": "={{ $json.tier }}",
+                    "rightValue": "Cold",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Cold"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        -48,
+        -112
+      ],
+      "id": "3899d16a-4f16-4218-a87b-0cf43367881f",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "jsCode": "await new Promise(resolve => setTimeout(resolve, 2000));\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        304,
+        -800
+      ],
+      "id": "c3acef11-3667-402a-94fd-de7d0130e8ff",
+      "name": "Code in JavaScript1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:11434/api/generate",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"llama3.2\",\n  \"prompt\": \"Write a cold email to {{ $json.name }}, who is {{ $json.title }} at {{ $json.company }} for P95.AI an API latency monitoring tool. Under 100 words. Pitch a 15-min call. Sign off as Team at P95.AI. Return ONLY the email body.\",\n  \"stream\": false,\n  \"name\": \"{{ $json.name }}\",\n  \"email\": \"{{ $json.email }}\",\n  \"company\": \"{{ $json.company }}\",\n  \"title\": \"{{ $json.title }}\",\n  \"tier\": \"{{ $json.tier }}\",\n  \"score\": \"{{ $json.score }}\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        544,
+        -800
+      ],
+      "id": "caeb722b-21e3-4a03-955c-c532a605afb6",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst emailText = (item.response || '').split('\\\\n').join('\\n');\nconst lead = $('Loop Over Items').item.json;\n\nreturn [{\n  json: {\n    name: lead.name || '',\n    email: lead.email || '',\n    company: lead.company || '',\n    title: lead.title || '',\n    tier: lead.tier || '',\n    score: lead.score || 0,\n    ai_email: emailText || '',\n    variant: \"A\",\n    sent_at: new Date().toISOString()\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        752,
+        -800
+      ],
+      "id": "3765124d-24d5-4769-8636-f5045c450ef7",
+      "name": "Code in JavaScript2"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.email }}",
+        "subject": "={{ $json.name }} — quick question about API reliability",
+        "emailType": "text",
+        "message": "={{ $json.ai_email }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        960,
+        -800
+      ],
+      "id": "ebf33faa-2a5c-44dc-8b6e-c76624514a64",
+      "name": "Send a message",
+      "webhookId": "2c443606-c27c-417d-aa23-a06a371a7e44",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "GhJJyRhv2ebdjruu",
+          "name": "Gmail account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1NBpg--0Gsybgzo6ZgFcJYF9cYWSwil8RW4ZrLo1fNe8",
+          "mode": "list",
+          "cachedResultName": "P95 Outreach Log",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1NBpg--0Gsybgzo6ZgFcJYF9cYWSwil8RW4ZrLo1fNe8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1NBpg--0Gsybgzo6ZgFcJYF9cYWSwil8RW4ZrLo1fNe8/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "name": "={{ $('Code in JavaScript2').item.json.name }}",
+            "email": "={{ $('Code in JavaScript2').item.json.email }}",
+            "company": "={{ $('Code in JavaScript2').item.json.company }}",
+            "title": "={{ $('Code in JavaScript2').item.json.title }}",
+            "tier": "={{ $('Code in JavaScript2').item.json.tier }}",
+            "score": "={{ $('Code in JavaScript2').item.json.score }}",
+            "variant": "={{ $('Code in JavaScript2').item.json.variant }}",
+            "ai_email": "={{ $('Code in JavaScript2').item.json.ai_email }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "company",
+              "displayName": "company",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "title",
+              "displayName": "title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "tier",
+              "displayName": "tier",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "score",
+              "displayName": "score",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "variant",
+              "displayName": "variant",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "subject",
+              "displayName": "subject",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ai_email",
+              "displayName": "ai_email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1168,
+        -800
+      ],
+      "id": "2d258009-c79a-4fe8-94ee-0f6e3f0d2a1d",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "X5uuFMzSvxzw2Dxg",
+          "name": "Google Sheets account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        832,
+        -544
+      ],
+      "id": "2093adb4-9d68-456d-8845-473b9ac5c57e",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "jsCode": "await new Promise(resolve => setTimeout(resolve, 2000));\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1120,
+        -416
+      ],
+      "id": "377ccecf-f1d5-4dd2-9822-be13a46f8117",
+      "name": "Code in JavaScript3"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:11434/api/generate",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"llama3.2\",\n  \"prompt\": \"Write a cold email to {{ $json.name }}, who is {{ $json.title }} at {{ $json.company }} for P95.AI. Focus on alert fatigue and on-call burnout. P95.AI uses AI to detect only real API degradation so engineers stop getting paged for nothing. Under 100 words. Pitch a 15-min demo. Sign off as Team at P95.AI. Return ONLY the email body.\",\n  \"stream\": false,\n  \"name\": \"{{ $json.name }}\",\n  \"email\": \"{{ $json.email }}\",\n  \"company\": \"{{ $json.company }}\",\n  \"title\": \"{{ $json.title }}\",\n  \"tier\": \"{{ $json.tier }}\",\n  \"score\": \"{{ $json.score }}\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        1264,
+        -416
+      ],
+      "id": "37608845-f3bc-4433-8938-f82c50a58cd1",
+      "name": "HTTP Request1"
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst emailText = (item.response || '').split('\\\\n').join('\\n');\nconst lead = $('Loop Over Items1').item.json;\n\nreturn [{\n  json: {\n    name: lead.name || '',\n    email: lead.email || '',\n    company: lead.company || '',\n    title: lead.title || '',\n    tier: lead.tier || '',\n    score: lead.score || 0,\n    ai_email: emailText || '',\n    variant: \"B\",\n    sent_at: new Date().toISOString()\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1408,
+        -416
+      ],
+      "id": "e410196b-3c9e-4a4d-9095-6087aa03b6f7",
+      "name": "Code in JavaScript4"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.email }}",
+        "subject": "={{ $json.name }} — quick question about API reliability",
+        "emailType": "text",
+        "message": "={{ $json.ai_email }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1552,
+        -416
+      ],
+      "id": "587036b4-73b8-4bae-bf14-b1968e330c28",
+      "name": "Send a message1",
+      "webhookId": "2c443606-c27c-417d-aa23-a06a371a7e44",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "GhJJyRhv2ebdjruu",
+          "name": "Gmail account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1NBpg--0Gsybgzo6ZgFcJYF9cYWSwil8RW4ZrLo1fNe8",
+          "mode": "list",
+          "cachedResultName": "P95 Outreach Log",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1NBpg--0Gsybgzo6ZgFcJYF9cYWSwil8RW4ZrLo1fNe8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1NBpg--0Gsybgzo6ZgFcJYF9cYWSwil8RW4ZrLo1fNe8/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "name": "={{ $('Code in JavaScript4').item.json.name }}",
+            "email": "={{ $('Code in JavaScript4').item.json.email }}",
+            "company": "={{ $('Code in JavaScript4').item.json.company }}",
+            "title": "={{ $('Code in JavaScript4').item.json.title }}",
+            "tier": "={{ $('Code in JavaScript4').item.json.tier }}",
+            "score": "={{ $('Code in JavaScript4').item.json.score }}",
+            "variant": "={{ $('Code in JavaScript4').item.json.variant }}",
+            "ai_email": "={{ $('Code in JavaScript4').item.json.ai_email }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "company",
+              "displayName": "company",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "title",
+              "displayName": "title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "tier",
+              "displayName": "tier",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "score",
+              "displayName": "score",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "variant",
+              "displayName": "variant",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "subject",
+              "displayName": "subject",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ai_email",
+              "displayName": "ai_email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1696,
+        -416
+      ],
+      "id": "1a7546c6-2e56-4533-9fbd-a9d2260acded",
+      "name": "Append row in sheet1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "X5uuFMzSvxzw2Dxg",
+          "name": "Google Sheets account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1200,
+        -240
+      ],
+      "id": "c678110f-e60f-4d09-a506-33aec502de08",
+      "name": "Loop Over Items1"
+    },
+    {
+      "parameters": {
+        "jsCode": "await new Promise(resolve => setTimeout(resolve, 2000));\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1040,
+        0
+      ],
+      "id": "3f9b206a-0234-4b6a-ab08-79090b6ac037",
+      "name": "Code in JavaScript5"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:11434/api/generate",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"llama3.2\",\n  \"prompt\": \"Write a warm friendly outreach email to {{ $json.name }}, who is {{ $json.title }} at {{ $json.company }} for P95.AI an API latency monitoring tool. Be helpful not pushy. Offer a free API health audit. Under 100 words. Sign off as Team at P95.AI. Return ONLY the email body.\",\n  \"stream\": false,\n  \"name\": \"{{ $json.name }}\",\n  \"email\": \"{{ $json.email }}\",\n  \"company\": \"{{ $json.company }}\",\n  \"title\": \"{{ $json.title }}\",\n  \"tier\": \"{{ $json.tier }}\",\n  \"score\": \"{{ $json.score }}\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        1248,
+        0
+      ],
+      "id": "e137eb93-c568-4829-bdaf-40c6581dc056",
+      "name": "HTTP Request2"
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst emailText = (item.response || '').split('\\\\n').join('\\n');\nconst lead = $('Loop Over Items2').item.json;\n\nreturn [{\n  json: {\n    name: lead.name || '',\n    email: lead.email || '',\n    company: lead.company || '',\n    title: lead.title || '',\n    tier: lead.tier || '',\n    score: lead.score || 0,\n    ai_email: emailText || '',\n    variant: \"warm\",\n    sent_at: new Date().toISOString()\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1408,
+        0
+      ],
+      "id": "5ea44d55-0023-45e3-8e32-0bedce5792e6",
+      "name": "Code in JavaScript6"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.email }}",
+        "subject": "={{ $json.name }} — quick question about API reliability",
+        "emailType": "text",
+        "message": "={{ $json.ai_email }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1584,
+        0
+      ],
+      "id": "aea68d3f-647f-4f0b-92ea-53f4b41f6b55",
+      "name": "Send a message2",
+      "webhookId": "2c443606-c27c-417d-aa23-a06a371a7e44",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "GhJJyRhv2ebdjruu",
+          "name": "Gmail account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1NBpg--0Gsybgzo6ZgFcJYF9cYWSwil8RW4ZrLo1fNe8",
+          "mode": "list",
+          "cachedResultName": "P95 Outreach Log",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1NBpg--0Gsybgzo6ZgFcJYF9cYWSwil8RW4ZrLo1fNe8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1NBpg--0Gsybgzo6ZgFcJYF9cYWSwil8RW4ZrLo1fNe8/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "name": "={{ $('Code in JavaScript6').item.json.name }}",
+            "email": "={{ $('Code in JavaScript6').item.json.email }}",
+            "company": "={{ $('Code in JavaScript6').item.json.company }}",
+            "title": "={{ $('Code in JavaScript6').item.json.title }}",
+            "tier": "={{ $('Code in JavaScript6').item.json.tier }}",
+            "score": "={{ $('Code in JavaScript6').item.json.score }}",
+            "variant": "={{ $('Code in JavaScript6').item.json.variant }}",
+            "ai_email": "={{ $('Code in JavaScript6').item.json.ai_email }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "company",
+              "displayName": "company",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "title",
+              "displayName": "title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "tier",
+              "displayName": "tier",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "score",
+              "displayName": "score",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "variant",
+              "displayName": "variant",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "subject",
+              "displayName": "subject",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ai_email",
+              "displayName": "ai_email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1760,
+        0
+      ],
+      "id": "5b3847bd-6cf3-4d85-a421-592ea2c6d08b",
+      "name": "Append row in sheet2",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "X5uuFMzSvxzw2Dxg",
+          "name": "Google Sheets account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1120,
+        192
+      ],
+      "id": "88c97312-8215-4b73-b006-668d4124e6d9",
+      "name": "Loop Over Items2"
+    },
+    {
+      "parameters": {
+        "jsCode": "await new Promise(resolve => setTimeout(resolve, 2000));\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        448
+      ],
+      "id": "5b4dbb81-1540-43fe-982c-b060a5756323",
+      "name": "Code in JavaScript7"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:11434/api/generate",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"llama3.2\",\n  \"prompt\": \"Write a very light touch intro email to {{ $json.name }}, who is {{ $json.title }} at {{ $json.company }} for P95.AI an API monitoring tool. No hard ask. Just introduce P95.AI in one sentence and offer to share a free benchmark report. Under 80 words. Sign off as Team at P95.AI. Return ONLY the email body.\",\n  \"stream\": false,\n  \"name\": \"{{ $json.name }}\",\n  \"email\": \"{{ $json.email }}\",\n  \"company\": \"{{ $json.company }}\",\n  \"title\": \"{{ $json.title }}\",\n  \"tier\": \"{{ $json.tier }}\",\n  \"score\": \"{{ $json.score }}\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        1056,
+        448
+      ],
+      "id": "24531ada-f92f-45c1-9843-9a159817c0bf",
+      "name": "HTTP Request3"
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nconst emailText = (item.response || '').split('\\\\n').join('\\n');\nconst lead = $('Loop Over Items3').item.json;\n\nreturn [{\n  json: {\n    name: lead.name || '',\n    email: lead.email || '',\n    company: lead.company || '',\n    title: lead.title || '',\n    tier: lead.tier || '',\n    score: lead.score || 0,\n    ai_email: emailText || '',\n    variant: \"cold\",\n    sent_at: new Date().toISOString()\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1216,
+        448
+      ],
+      "id": "7303efe3-aa29-41c0-b92d-f61441f05b53",
+      "name": "Code in JavaScript8"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.email }}",
+        "subject": "={{ $json.name }} — quick question about API reliability",
+        "emailType": "text",
+        "message": "={{ $json.ai_email }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1376,
+        448
+      ],
+      "id": "b4d6c0ff-b4c5-4d50-9535-ac39303ea8d2",
+      "name": "Send a message3",
+      "webhookId": "2c443606-c27c-417d-aa23-a06a371a7e44",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "GhJJyRhv2ebdjruu",
+          "name": "Gmail account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1NBpg--0Gsybgzo6ZgFcJYF9cYWSwil8RW4ZrLo1fNe8",
+          "mode": "list",
+          "cachedResultName": "P95 Outreach Log",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1NBpg--0Gsybgzo6ZgFcJYF9cYWSwil8RW4ZrLo1fNe8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1NBpg--0Gsybgzo6ZgFcJYF9cYWSwil8RW4ZrLo1fNe8/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "name": "={{ $('Code in JavaScript8').item.json.name }}",
+            "email": "={{ $('Code in JavaScript8').item.json.email }}",
+            "company": "={{ $('Code in JavaScript8').item.json.company }}",
+            "title": "={{ $('Code in JavaScript8').item.json.title }}",
+            "tier": "={{ $('Code in JavaScript8').item.json.tier }}",
+            "score": "={{ $('Code in JavaScript8').item.json.score }}",
+            "variant": "={{ $('Code in JavaScript8').item.json.variant }}",
+            "ai_email": "={{ $('Code in JavaScript8').item.json.ai_email }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "company",
+              "displayName": "company",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "title",
+              "displayName": "title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "tier",
+              "displayName": "tier",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "score",
+              "displayName": "score",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "variant",
+              "displayName": "variant",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "subject",
+              "displayName": "subject",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ai_email",
+              "displayName": "ai_email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1536,
+        448
+      ],
+      "id": "3a460d68-001b-4dce-9a7f-9cb2605adaef",
+      "name": "Append row in sheet3",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "X5uuFMzSvxzw2Dxg",
+          "name": "Google Sheets account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        912,
+        624
+      ],
+      "id": "792bf526-fcd2-4d48-9b32-3ce15bb71fee",
+      "name": "Loop Over Items3"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "clay",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -736,
+        -368
+      ],
+      "id": "31f14550-95b4-4a66-9c93-9bf3ef07e8ba",
+      "name": "Webhook1",
+      "webhookId": "846213e8-2a10-4cd3-8dcb-551527a9ef82"
+    },
+    {
+      "parameters": {
+        "jsCode": "const csv = [\n  {\n    \"name\": \"Samantha Johnson\",\n    \"email\": \"samantha.johnson@wilsonnewtonandatkinson.com\",\n    \"company\": \"Wilson, Newton and Atkinson\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/samantha-johnson\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Tammy Brown\",\n    \"email\": \"tammy.brown@douglasgroup.com\",\n    \"company\": \"Douglas Group\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/tammy-brown\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Laurie Diaz\",\n    \"email\": \"laurie.diaz@miller-sherman.com\",\n    \"company\": \"Miller-Sherman\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/laurie-diaz\",\n    \"tier\": \"Cold\",\n    \"score\": 30\n  },\n  {\n    \"name\": \"Beverly Moore\",\n    \"email\": \"beverly.moore@cruzplc.com\",\n    \"company\": \"Cruz PLC\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/beverly-moore\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Jake Fox\",\n    \"email\": \"jake.fox@hodges-brewer.com\",\n    \"company\": \"Hodges-Brewer\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/jake-fox\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Jeffrey Page\",\n    \"email\": \"jeffrey.page@miller-carey.com\",\n    \"company\": \"Miller-Carey\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/jeffrey-page\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Madeline Williams\",\n    \"email\": \"madeline.williams@alexander-shaw.com\",\n    \"company\": \"Alexander-Shaw\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/madeline-williams\",\n    \"tier\": \"Cold\",\n    \"score\": 30\n  },\n  {\n    \"name\": \"Victoria Cooper\",\n    \"email\": \"victoria.cooper@allenzimmermanandnguyen.com\",\n    \"company\": \"Allen, Zimmerman and Nguyen\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/victoria-cooper\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Amy Wells\",\n    \"email\": \"amy.wells@vazquezinc.com\",\n    \"company\": \"Vazquez Inc\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/amy-wells\",\n    \"tier\": \"Cold\",\n    \"score\": 30\n  },\n  {\n    \"name\": \"Kimberly Orr\",\n    \"email\": \"kimberly.orr@vargas-garcia.com\",\n    \"company\": \"Vargas-Garcia\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/kimberly-orr\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Jacqueline Reed\",\n    \"email\": \"jacqueline.reed@martinezplc.com\",\n    \"company\": \"Martinez PLC\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/jacqueline-reed\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Andrew Merritt\",\n    \"email\": \"andrew.merritt@hodgeclarkandrobinson.com\",\n    \"company\": \"Hodge, Clark and Robinson\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/andrew-merritt\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Deborah Thompson\",\n    \"email\": \"deborah.thompson@johnson-henderson.com\",\n    \"company\": \"Johnson-Henderson\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/deborah-thompson\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Douglas Johnson\",\n    \"email\": \"douglas.johnson@bennett-hendrix.com\",\n    \"company\": \"Bennett-Hendrix\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/douglas-johnson\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Nancy Joyce\",\n    \"email\": \"nancy.joyce@hamiltonmartinandwade.com\",\n    \"company\": \"Hamilton, Martin and Wade\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/nancy-joyce\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"James Lee\",\n    \"email\": \"james.lee@stewart-reese.com\",\n    \"company\": \"Stewart-Reese\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/james-lee\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Jacqueline Beck\",\n    \"email\": \"jacqueline.beck@marshall-coleman.com\",\n    \"company\": \"Marshall-Coleman\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/jacqueline-beck\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Ann Smith\",\n    \"email\": \"ann.smith@olsen-young.com\",\n    \"company\": \"Olsen-Young\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/ann-smith\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Lauren Morrison\",\n    \"email\": \"lauren.morrison@boyd-jones.com\",\n    \"company\": \"Boyd-Jones\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/lauren-morrison\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Anita Walker\",\n    \"email\": \"anita.walker@velasquez-jones.com\",\n    \"company\": \"Velasquez-Jones\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/anita-walker\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Robert Carlson\",\n    \"email\": \"robert.carlson@holtprattandwheeler.com\",\n    \"company\": \"Holt, Pratt and Wheeler\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/robert-carlson\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Thomas Rodriguez\",\n    \"email\": \"thomas.rodriguez@murphyllc.com\",\n    \"company\": \"Murphy LLC\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/thomas-rodriguez\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Michael Robinson\",\n    \"email\": \"michael.robinson@walker-collins.com\",\n    \"company\": \"Walker-Collins\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/michael-robinson\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Shannon Roberts\",\n    \"email\": \"shannon.roberts@martinezltd.com\",\n    \"company\": \"Martinez Ltd\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/shannon-roberts\",\n    \"tier\": \"Cold\",\n    \"score\": 30\n  },\n  {\n    \"name\": \"Todd West\",\n    \"email\": \"todd.west@crawfordfoxandmartinez.com\",\n    \"company\": \"Crawford, Fox and Martinez\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/todd-west\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Leslie Harvey\",\n    \"email\": \"leslie.harvey@millerellisandklein.com\",\n    \"company\": \"Miller, Ellis and Klein\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/leslie-harvey\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Beverly Peters\",\n    \"email\": \"beverly.peters@hughes-miles.com\",\n    \"company\": \"Hughes-Miles\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/beverly-peters\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Adrian Garcia\",\n    \"email\": \"adrian.garcia@russellsmithandcooke.com\",\n    \"company\": \"Russell, Smith and Cooke\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/adrian-garcia\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Heather Brennan\",\n    \"email\": \"heather.brennan@howellandsons.com\",\n    \"company\": \"Howell and Sons\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/heather-brennan\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Justin Morales\",\n    \"email\": \"justin.morales@thompson-white.com\",\n    \"company\": \"Thompson-White\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/justin-morales\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Rachael Rogers\",\n    \"email\": \"rachael.rogers@nichols-simpson.com\",\n    \"company\": \"Nichols-Simpson\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/rachael-rogers\",\n    \"tier\": \"Cold\",\n    \"score\": 30\n  },\n  {\n    \"name\": \"Jennifer Moore\",\n    \"email\": \"jennifer.moore@hayesltd.com\",\n    \"company\": \"Hayes Ltd\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/jennifer-moore\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Austin Patrick\",\n    \"email\": \"austin.patrick@peterson-jones.com\",\n    \"company\": \"Peterson-Jones\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/austin-patrick\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Juan Carson\",\n    \"email\": \"juan.carson@sloangroup.com\",\n    \"company\": \"Sloan Group\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/juan-carson\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Sydney Gilmore\",\n    \"email\": \"sydney.gilmore@petersmaxwellandpatterson.com\",\n    \"company\": \"Peters, Maxwell and Patterson\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/sydney-gilmore\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Duane Marshall\",\n    \"email\": \"duane.marshall@rivera-yates.com\",\n    \"company\": \"Rivera-Yates\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/duane-marshall\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Jonathan White\",\n    \"email\": \"jonathan.white@carrollplc.com\",\n    \"company\": \"Carroll PLC\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/jonathan-white\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Nancy Sanchez\",\n    \"email\": \"nancy.sanchez@schmidtellisandboyd.com\",\n    \"company\": \"Schmidt, Ellis and Boyd\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/nancy-sanchez\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Robert Newman\",\n    \"email\": \"robert.newman@krueger-matthews.com\",\n    \"company\": \"Krueger-Matthews\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/robert-newman\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Glenn Nguyen\",\n    \"email\": \"glenn.nguyen@hogankhanandcrane.com\",\n    \"company\": \"Hogan, Khan and Crane\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/glenn-nguyen\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"William Hunt\",\n    \"email\": \"william.hunt@watsoninc.com\",\n    \"company\": \"Watson Inc\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/william-hunt\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Brian Graves\",\n    \"email\": \"brian.graves@beckerlopezandpitts.com\",\n    \"company\": \"Becker, Lopez and Pitts\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/brian-graves\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Andrea Hood\",\n    \"email\": \"andrea.hood@vaughnandsons.com\",\n    \"company\": \"Vaughn and Sons\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/andrea-hood\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Heather Randolph\",\n    \"email\": \"heather.randolph@watsonsummersandschroeder.com\",\n    \"company\": \"Watson, Summers and Schroeder\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/heather-randolph\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Stephanie Hardy\",\n    \"email\": \"stephanie.hardy@garzagroup.com\",\n    \"company\": \"Garza Group\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/stephanie-hardy\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Karen Brock\",\n    \"email\": \"karen.brock@knappgibsonandblackburn.com\",\n    \"company\": \"Knapp, Gibson and Blackburn\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/karen-brock\",\n    \"tier\": \"Cold\",\n    \"score\": 30\n  },\n  {\n    \"name\": \"Megan Taylor\",\n    \"email\": \"megan.taylor@maldonadogroup.com\",\n    \"company\": \"Maldonado Group\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/megan-taylor\",\n    \"tier\": \"Cold\",\n    \"score\": 30\n  },\n  {\n    \"name\": \"David Wallace\",\n    \"email\": \"david.wallace@hooverandsons.com\",\n    \"company\": \"Hoover and Sons\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/david-wallace\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Tracy Arroyo\",\n    \"email\": \"tracy.arroyo@kim-miller.com\",\n    \"company\": \"Kim-Miller\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/tracy-arroyo\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Elizabeth Lopez\",\n    \"email\": \"elizabeth.lopez@garrettllc.com\",\n    \"company\": \"Garrett LLC\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/elizabeth-lopez\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Elizabeth Brown\",\n    \"email\": \"elizabeth.brown@mccarthysanfordandvaughn.com\",\n    \"company\": \"Mccarthy, Sanford and Vaughn\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/elizabeth-brown\",\n    \"tier\": \"Cold\",\n    \"score\": 30\n  },\n  {\n    \"name\": \"Jeffrey Jackson\",\n    \"email\": \"jeffrey.jackson@hardin-davis.com\",\n    \"company\": \"Hardin-Davis\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/jeffrey-jackson\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Robin Martin\",\n    \"email\": \"robin.martin@andrews-hill.com\",\n    \"company\": \"Andrews-Hill\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/robin-martin\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Stephen Reynolds\",\n    \"email\": \"stephen.reynolds@walker-petty.com\",\n    \"company\": \"Walker-Petty\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/stephen-reynolds\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Robert French\",\n    \"email\": \"robert.french@graham-myers.com\",\n    \"company\": \"Graham-Myers\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/robert-french\",\n    \"tier\": \"Cold\",\n    \"score\": 30\n  },\n  {\n    \"name\": \"Brian Perry\",\n    \"email\": \"brian.perry@herrerainc.com\",\n    \"company\": \"Herrera Inc\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/brian-perry\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Lindsey Lopez\",\n    \"email\": \"lindsey.lopez@shepherdllc.com\",\n    \"company\": \"Shepherd LLC\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/lindsey-lopez\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Dr. Christopher Black\",\n    \"email\": \"dr..christopher.black@jonesbarajasandgross.com\",\n    \"company\": \"Jones, Barajas and Gross\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/dr.-christopher-black\",\n    \"tier\": \"Cold\",\n    \"score\": 30\n  },\n  {\n    \"name\": \"Lisa Marquez\",\n    \"email\": \"lisa.marquez@staffordfisherandlee.com\",\n    \"company\": \"Stafford, Fisher and Lee\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/lisa-marquez\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Hunter Morris\",\n    \"email\": \"hunter.morris@peckplc.com\",\n    \"company\": \"Peck PLC\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/hunter-morris\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"James Turner\",\n    \"email\": \"james.turner@rogerspalmerandmathis.com\",\n    \"company\": \"Rogers, Palmer and Mathis\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/james-turner\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Annette Flores\",\n    \"email\": \"annette.flores@schaeferlawrenceandcohen.com\",\n    \"company\": \"Schaefer, Lawrence and Cohen\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/annette-flores\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Mary Young\",\n    \"email\": \"mary.young@simmonsgroup.com\",\n    \"company\": \"Simmons Group\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/mary-young\",\n    \"tier\": \"Cold\",\n    \"score\": 30\n  },\n  {\n    \"name\": \"Wendy Stafford\",\n    \"email\": \"wendy.stafford@santanagroup.com\",\n    \"company\": \"Santana Group\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/wendy-stafford\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Jennifer Burgess\",\n    \"email\": \"jennifer.burgess@nelsoninc.com\",\n    \"company\": \"Nelson Inc\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/jennifer-burgess\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"David Chase\",\n    \"email\": \"david.chase@thomasblackandjohnson.com\",\n    \"company\": \"Thomas, Black and Johnson\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/david-chase\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Brandon Lane\",\n    \"email\": \"brandon.lane@jamesllc.com\",\n    \"company\": \"James LLC\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/brandon-lane\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Rachel Thompson\",\n    \"email\": \"rachel.thompson@ryan-davis.com\",\n    \"company\": \"Ryan-Davis\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/rachel-thompson\",\n    \"tier\": \"Cold\",\n    \"score\": 30\n  },\n  {\n    \"name\": \"Catherine Alexander\",\n    \"email\": \"catherine.alexander@morrisinc.com\",\n    \"company\": \"Morris Inc\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/catherine-alexander\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Lori Henry\",\n    \"email\": \"lori.henry@raymondjohnsonandmurphy.com\",\n    \"company\": \"Raymond, Johnson and Murphy\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/lori-henry\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Sandra Barajas\",\n    \"email\": \"sandra.barajas@allenlaraandreed.com\",\n    \"company\": \"Allen, Lara and Reed\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/sandra-barajas\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Sonia Brown\",\n    \"email\": \"sonia.brown@lynch-wright.com\",\n    \"company\": \"Lynch-Wright\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/sonia-brown\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Stephen Stewart\",\n    \"email\": \"stephen.stewart@hernandezplc.com\",\n    \"company\": \"Hernandez PLC\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/stephen-stewart\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Timothy Walker\",\n    \"email\": \"timothy.walker@lynchmasonandcole.com\",\n    \"company\": \"Lynch, Mason and Cole\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/timothy-walker\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Alexandria Wilkins\",\n    \"email\": \"alexandria.wilkins@hoffman-horton.com\",\n    \"company\": \"Hoffman-Horton\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/alexandria-wilkins\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Michelle Jones\",\n    \"email\": \"michelle.jones@martin-hoover.com\",\n    \"company\": \"Martin-Hoover\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/michelle-jones\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"William Hayes\",\n    \"email\": \"william.hayes@vazquez-garcia.com\",\n    \"company\": \"Vazquez-Garcia\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/william-hayes\",\n    \"tier\": \"Cold\",\n    \"score\": 30\n  },\n  {\n    \"name\": \"Jason Mathews\",\n    \"email\": \"jason.mathews@whitehughesandlynn.com\",\n    \"company\": \"White, Hughes and Lynn\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/jason-mathews\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Frank Bowen\",\n    \"email\": \"frank.bowen@frankinc.com\",\n    \"company\": \"Frank Inc\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/frank-bowen\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Holly Smith\",\n    \"email\": \"holly.smith@chaseinc.com\",\n    \"company\": \"Chase Inc\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/holly-smith\",\n    \"tier\": \"Cold\",\n    \"score\": 30\n  },\n  {\n    \"name\": \"Robert Bauer\",\n    \"email\": \"robert.bauer@smith-sullivan.com\",\n    \"company\": \"Smith-Sullivan\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/robert-bauer\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Sharon Robles\",\n    \"email\": \"sharon.robles@kellyltd.com\",\n    \"company\": \"Kelly Ltd\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/sharon-robles\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Gregory Dunn\",\n    \"email\": \"gregory.dunn@smith-walters.com\",\n    \"company\": \"Smith-Walters\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/gregory-dunn\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Nicholas Thompson\",\n    \"email\": \"nicholas.thompson@torres-cole.com\",\n    \"company\": \"Torres-Cole\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/nicholas-thompson\",\n    \"tier\": \"Cold\",\n    \"score\": 30\n  },\n  {\n    \"name\": \"Gabrielle Ball\",\n    \"email\": \"gabrielle.ball@pham-decker.com\",\n    \"company\": \"Pham-Decker\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/gabrielle-ball\",\n    \"tier\": \"Cold\",\n    \"score\": 30\n  },\n  {\n    \"name\": \"Robert Daniels\",\n    \"email\": \"robert.daniels@brandt-farmer.com\",\n    \"company\": \"Brandt-Farmer\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/robert-daniels\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Laura Rogers DDS\",\n    \"email\": \"laura.rogers.dds@clarknelsonandharmon.com\",\n    \"company\": \"Clark, Nelson and Harmon\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/laura-rogers-dds\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Frederick Jones\",\n    \"email\": \"frederick.jones@brooksguzmanandlucero.com\",\n    \"company\": \"Brooks, Guzman and Lucero\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/frederick-jones\",\n    \"tier\": \"Cold\",\n    \"score\": 30\n  },\n  {\n    \"name\": \"Andre Livingston\",\n    \"email\": \"andre.livingston@allenturnerandlloyd.com\",\n    \"company\": \"Allen, Turner and Lloyd\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/andre-livingston\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Jorge Hester\",\n    \"email\": \"jorge.hester@castro-navarro.com\",\n    \"company\": \"Castro-Navarro\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/jorge-hester\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Jonathan Mack\",\n    \"email\": \"jonathan.mack@lloydltd.com\",\n    \"company\": \"Lloyd Ltd\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/jonathan-mack\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Barbara Summers\",\n    \"email\": \"barbara.summers@ramos-osborn.com\",\n    \"company\": \"Ramos-Osborn\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/barbara-summers\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Destiny Stephens\",\n    \"email\": \"destiny.stephens@barretthillandcastaneda.com\",\n    \"company\": \"Barrett, Hill and Castaneda\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/destiny-stephens\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Ariana Baker\",\n    \"email\": \"ariana.baker@cruzllc.com\",\n    \"company\": \"Cruz LLC\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/ariana-baker\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Steve Miller\",\n    \"email\": \"steve.miller@sloanstevensandalexander.com\",\n    \"company\": \"Sloan, Stevens and Alexander\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/steve-miller\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Lisa Lewis\",\n    \"email\": \"lisa.lewis@moralescampbellandbrown.com\",\n    \"company\": \"Morales, Campbell and Brown\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/lisa-lewis\",\n    \"tier\": \"Hot\",\n    \"score\": 80\n  },\n  {\n    \"name\": \"Peter Allen\",\n    \"email\": \"peter.allen@walkerwaltersandhowell.com\",\n    \"company\": \"Walker, Walters and Howell\",\n    \"title\": \"CTO\",\n    \"linkedin\": \"https://www.linkedin.com/in/peter-allen\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Alexander Fisher\",\n    \"email\": \"alexander.fisher@ellissweeneyandbarnes.com\",\n    \"company\": \"Ellis, Sweeney and Barnes\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/alexander-fisher\",\n    \"tier\": \"Cold\",\n    \"score\": 30\n  },\n  {\n    \"name\": \"Michael Ford\",\n    \"email\": \"michael.ford@powersandsons.com\",\n    \"company\": \"Powers and Sons\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/michael-ford\",\n    \"tier\": \"Warm\",\n    \"score\": 60\n  },\n  {\n    \"name\": \"Laura Martin\",\n    \"email\": \"laura.martin@robbinsplc.com\",\n    \"company\": \"Robbins PLC\",\n    \"title\": \"VP of Engineering\",\n    \"linkedin\": \"https://www.linkedin.com/in/laura-martin\",\n    \"tier\": \"Cold\",\n    \"score\": 30\n  }\n];\n\nreturn csv.map(obj => ({ json: obj }));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -336,
+        16
+      ],
+      "id": "5c332c2c-8d17-4e3f-8ec2-e95d2828e96c",
+      "name": "Code in JavaScript9"
+    },
+    {
+      "parameters": {
+        "path": "079f7860-aa05-4f08-82ea-f8a422e5a6de",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -624,
+        -2.559814529475517
+      ],
+      "id": "a8e67e86-3167-44fb-8425-23cd77fbd5cb",
+      "name": "Webhook",
+      "webhookId": "079f7860-aa05-4f08-82ea-f8a422e5a6de"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Code in JavaScript9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        []
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript2": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript3": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript4": {
+      "main": [
+        [
+          {
+            "node": "Send a message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message1": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items1": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Code in JavaScript3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript5": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript6": {
+      "main": [
+        [
+          {
+            "node": "Send a message2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message2": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet2": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items2": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Code in JavaScript5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript7": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request3": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript8": {
+      "main": [
+        [
+          {
+            "node": "Send a message3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message3": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet3": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items3": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Code in JavaScript7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook1": {
+      "main": [
+        []
+      ]
+    },
+    "Code in JavaScript9": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "14830552-487a-48bd-8785-c5cc623b5fa7",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "ec136abaca18074cd91feebb96afeafcbb476c57bb05dca5ef25a540f32b5ffb"
+  },
+  "id": "ut9u5mf9rHU2QXLK",
+  "tags": []
+}
